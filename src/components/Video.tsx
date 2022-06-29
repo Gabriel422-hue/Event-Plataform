@@ -2,6 +2,7 @@ import { DefaultUi, Player, Youtube } from "@vime/react";
 import { CaretRight, DiscordLogo, FileArrowDown, Image, Lightning } from "phosphor-react";
 import { gql, useQuery } from "@apollo/client";
 import '@vime/core/themes/default.css';
+import { Footer } from "./Footer";
 
 
 const GET_LESSON_BY_SLUG_QUERY = gql `
@@ -137,6 +138,9 @@ export function Video(props:VideoProps) {
                         </div>
                     </a>
                 </div>
+            </div>
+            <div className="px-[100px]">
+                <Footer />
             </div>
         </div>
     );
