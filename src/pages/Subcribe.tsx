@@ -5,14 +5,6 @@ import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 
 
-const CREATE_SUBSCRIBER_MUTATION = gql `
-mutation CreateSubscriber ($name:String!, $email:String!) {
-  createSubscriber(data: {name:$name, email:$email }) {
-    id
-  }
-}
-`
-
 export function Subcribe(){
     const navigate = useNavigate()
 

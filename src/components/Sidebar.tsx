@@ -3,27 +3,6 @@ import { Lesson } from "./Lesson";
 
 
 
-const GET_LESSONS_QUERY = gql `
-query {
-  lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
-    id
-    lessonType
-    availableAt
-    title
-    slug
-  }
-}
-`
-interface GetLessonsQueryReponse {
-    lessons:{
-        id: string
-        title: string
-        slug: string
-        availableAt: string
-        lessonsType: 'live' | 'class'
-    }[]
-}
-
 export function Sidebar (){
     const {data} = useQuery <GetLessonsQueryReponse>(GET_LESSONS_QUERY)
 

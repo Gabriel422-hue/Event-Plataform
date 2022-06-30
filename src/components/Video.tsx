@@ -5,35 +5,7 @@ import '@vime/core/themes/default.css';
 import { Footer } from "./Footer";
 
 
-const GET_LESSON_BY_SLUG_QUERY = gql `
-    query GetLessonBySlug ($slug: String ) {
-        lesson(where: {slug: $slug}) {
-        title
-        videoId
-        description
-        teacher {
-            name
-            bio
-            avatarURL
-        }
-        }
-    }
-  `
-interface GetLessonBySlugResponse{
-    lesson:{
-        title:string;
-        videoId: string;
-        description:string;
-        teacher:{
-            bio:string;
-            avatarURL:string;
-            name:string;
-        }
-    }
-}
-interface VideoProps {
-    lessonSlug: string;
-}
+
 
 export function Video(props:VideoProps) {
     const {data} = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY,{
