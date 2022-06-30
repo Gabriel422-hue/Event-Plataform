@@ -8,7 +8,7 @@ export function Navigation() {
   return (
     <nav className="">
       <ul className="flex gap-6">
-        <li className={`py-7 text-gray-300 border-green-500 ${page === "lesson" && 'border-b-2 font-bold text-gray-100'}`}>
+        <li className={`py-7 text-gray-300 border-green-500 ${page !== "cronograma" && 'border-b-2 font-bold text-gray-100'}`}>
           <Link to={`/event`}>Aulas</Link>
         </li>
 
