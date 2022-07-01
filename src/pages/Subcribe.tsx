@@ -3,6 +3,7 @@ import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
+import { useCreateSubscriberMutation } from "../graphql/generated";
 
 
 const CREATE_SUBSCRIBER_MUTATION = gql `
@@ -19,7 +20,7 @@ export function Subcribe(){
     const [name, setName ] = useState('');
     const [email, setEmail ] = useState('');
 
-    const [createSubscriber,{ loading }] = useMutation (CREATE_SUBSCRIBER_MUTATION)
+    const [createSubscriber,{ loading }] = useCreateSubscriberMutation()
 
     async function handleSubscribe(event: FormEvent){
         event?.preventDefault();
