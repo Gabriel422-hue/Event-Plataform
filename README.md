@@ -10,7 +10,7 @@
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Ricmaloy/event-platform?color=00875F">
   
   <a href="https://github.com/Ricmaloy/NLW-6/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Ricmaloy/event-platform?color=00B37E">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Gabriel422-hue/event-platform?color=00B37E">
   </a>
 
   <img alt="GitHub" src="https://img.shields.io/github/license/Ricmaloy/event-platform?color=81D8F7">
